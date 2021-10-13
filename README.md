@@ -37,3 +37,4 @@ root                    (project root folder)
 * TODO: Add your names and emails here
 
 * Michael De Spain - mdespain35@gmail.com
+* Jeremy Jackson - jac17053@byui.edu
