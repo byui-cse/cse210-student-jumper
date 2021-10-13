@@ -35,3 +35,4 @@ root                    (project root folder)
 ## Authors
 ---
 * TODO: Add your names and emails here
+Brian Lewis - 1808ub@gmail.com
