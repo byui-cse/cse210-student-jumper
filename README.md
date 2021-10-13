@@ -45,8 +45,12 @@ root                    (project root folder)
 ## Authors
 
 ---
+
+Gilles Mambou - gillesravelmambou@gmail.com
+
 Matias Rodriguez = maturod96@gmail.com
 
 Scott Thompson 
 Email: Scottathompson98@gmail.com
+
 
