@@ -46,11 +46,16 @@ root                    (project root folder)
 
 ---
 
+
+Nathan Muller - nmuller005@gmail.com
+
+
 Gilles Mambou - gillesravelmambou@gmail.com
 
 Matias Rodriguez = maturod96@gmail.com
 
 Scott Thompson 
 Email: Scottathompson98@gmail.com
+
 
 
