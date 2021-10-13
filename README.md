@@ -45,7 +45,8 @@ root                    (project root folder)
 ## Authors
 
 ---
-
-- TODO: Add your names and emails here
-
 Matias Rodriguez = maturod96@gmail.com
+
+Scott Thompson 
+Email: Scottathompson98@gmail.com
+
