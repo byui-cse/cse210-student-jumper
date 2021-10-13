@@ -36,3 +36,4 @@ root                    (project root folder)
 ---
 * TODO: Add your names and emails here
 Brian Lewis - 1808ub@gmail.com
+Federico Pregnolato - pre13008@byui.edu
