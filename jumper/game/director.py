@@ -1,3 +1,4 @@
+from game.guesser import Guesser
 from game.word import Word
 from game.parachute import Parachute
 
@@ -9,6 +10,7 @@ class Director:
     
     Attributes:
         keep_playing (boolean): Whether or not the player wants to keep playing.
+        guesser: User guesses the secret word by imputing a letter
         parachute: Will take care of the graphics.
         word: Will take care of getting a random word and respond to user inputs.
     """
@@ -19,7 +21,8 @@ class Director:
             self (Director): an instance of Director.
         """
         self.word = Word()
-        self.parachute = Parachute()        
+        self.parachute = Parachute()
+        self.guesser = Guesser()
         self.keep_playing = True        
 
     def start_game(self):
@@ -41,11 +44,11 @@ class Director:
         self.keep_playing = not self.parachute.end() or self.word.see_blank()
 
     def get_inputs(self):
-        user_guess = self.word.get_user_guess("Guess a letter [a-z]: ")
+        user_guess = self.guesser.get_user_guess("Guess a letter [a-z]: ")
         
         while self.word.verify_letter(user_guess) == False:
             print("Please enter a different letter.")
-            user_guess = self.word.get_user_guess("Guess a letter [a-z]: ")
+            user_guess = self.guesser.get_user_guess("Guess a letter [a-z]: ")
         
         if self.word.letter_in_list(user_guess) == False:
             self.parachute.guessed_wrong()
