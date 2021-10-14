@@ -41,3 +41,4 @@ root                    (project root folder)
 * I-Learn: https://byui.instructure.com/courses/149968/assignments/7426773
 * Team Challenge 05: https://byui-cse.github.io/cse210-course/module05/team_challenge.html
 * Jumper Requirements: https://byui-cse.github.io/cse210-course/module05/jumper_requirements.html
+* Word List File: https://www.mit.edu/~ecprice/wordlist.10000
