@@ -36,6 +36,7 @@ root                    (project root folder)
 ---
 * TODO: Add your names and emails here
 
-Jeremy Diamond socjeremyd@gmail.com  
+Jeremy Diamond socjeremyd@gmail.com 
+Ryder Garache gryderjose@gmail.com 
 .
 
