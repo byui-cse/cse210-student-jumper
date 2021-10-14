@@ -24,11 +24,11 @@ class Director:
         self.game_over()
 
     def get_inputs(self):
-        userInput = self.console.get_letter("Guess a letter [a-z]: ")
-        while not self.words.can_guess(userInput):
+        user_input = self.console.get_letter("Guess a letter [a-z]: ")
+        while not self.words.can_guess(user_input):
             self.console.write("Letter already guessed.")
-            userInput = self.console.get_letter("Guess a letter [a-z]: ")
-        if not self.words.verify_letter(userInput):
+            user_input = self.console.get_letter("Guess a letter [a-z]: ")
+        if not self.words.verify_letter(user_input):
             self.parachute.wrong_guess()
 
     def do_outputs(self):
