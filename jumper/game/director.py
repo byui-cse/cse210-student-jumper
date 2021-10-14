@@ -1,4 +1,3 @@
-from game.console import Console
 from game.word import Word
 from game.parachute import Parachute
 
@@ -11,7 +10,6 @@ class Director:
     Attributes:
         keep_playing (boolean): Whether or not the player wants to keep playing.
         parachute: Will take care of the graphics.
-        console: Dictates user input and return a result.
         words: Will take of getting a random word and respond to user inputs.
     """
 
@@ -21,7 +19,6 @@ class Director:
         Args:
             self (Director): an instance of Director.
         """
-        self.console = Console()
         self.word = Word()
         self.parachute = Parachute()        
         self.keep_playing = True        
@@ -45,11 +42,11 @@ class Director:
         self.keep_playing = not self.parachute.end() or self.word.see_blank()
 
     def get_inputs(self):
-        user_guess = self.console.get_user_guess("Guess a letter [a-z]: ")
+        user_guess = self.word.get_user_guess("Guess a letter [a-z]: ")
         
         while self.word.verify_letter(user_guess) == False:
             print("Please enter a different letter.")
-            user_guess = self.console.get_user_guess("Guess a letter [a-z]: ")
+            user_guess = self.word.get_user_guess("Guess a letter [a-z]: ")
         
         if self.word.letter_in_list(user_guess) == False:
             self.parachute.guessed_wrong()
