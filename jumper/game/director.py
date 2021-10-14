@@ -10,7 +10,7 @@ class Director:
     Attributes:
         keep_playing (boolean): Whether or not the player wants to keep playing.
         parachute: Will take care of the graphics.
-        words: Will take of getting a random word and respond to user inputs.
+        word: Will take care of getting a random word and respond to user inputs.
     """
 
     def __init__(self):
