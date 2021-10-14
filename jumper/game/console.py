@@ -7,4 +7,4 @@ class Console:
         return float(input(prompt))
     
     def write(self, text):
-        print(text)
+        return print(text)
