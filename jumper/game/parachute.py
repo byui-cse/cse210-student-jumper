@@ -5,7 +5,8 @@ class Parachute:
         
         Args:
             self (Parachute): an instance of Parachute.
-        """        
+        """
+        self.num_wrong_guess = 0        
         self.parachute_graphics = ["  ___",
                                    " /___\\",
                                    " \\   /",
@@ -14,8 +15,7 @@ class Parachute:
                                    "  /|\\",
                                    "  / \\",
                                    "\n",
-                                   "^^^^^^^"]
-        self.num_wrong_guess = 0
+                                   "^^^^^^^"]        
         
     def parachuter(self):
         if self.num_wrong_guess is not 4:

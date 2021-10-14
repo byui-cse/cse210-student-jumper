@@ -9,10 +9,10 @@ class Word:
             self (Word): an instance of Word.
         """
         self.letter_guessed = ["_"]
-        self.chosen_word = self.random_word()
-        self.blank_word = ["_"] * len(self.chosen_word)
         self.words = ["dictionary"]
-        
+        self.chosen_word = self.random_word()        
+        self.blank_word = ["_"] * len(self.chosen_word)
+
     def secret_word(self):
         for i in re.finditer(self.letter_guessed[-1], self.chosen_word):
             index = i.start()
@@ -26,7 +26,7 @@ class Word:
             return False
         else:
             return True
-
+    
     def verify_letter(self, user_guess):
         if user_guess not in self.letter_guessed:
             return self.letter_guessed.append(user_guess)

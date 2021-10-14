@@ -10,10 +10,11 @@ class Director:
     
     Attributes:
         keep_playing (boolean): Whether or not the player wants to keep playing.
-        guesser: User guesses the secret word by imputing a letter
         parachute: Will take care of the graphics.
-        word: Will take care of getting a random word and respond to user inputs.
+        guesser: User guesses the secret word by imputing a letter.
+        words: Will take of getting a random word and respond to user inputs.
     """
+
     def __init__(self):
         """The class constructor.
         
@@ -22,7 +23,7 @@ class Director:
         """
         self.word = Word()
         self.parachute = Parachute()
-        self.guesser = Guesser()
+        self.guesser = Guesser()        
         self.keep_playing = True        
 
     def start_game(self):
