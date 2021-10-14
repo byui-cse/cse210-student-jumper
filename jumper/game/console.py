@@ -4,8 +4,6 @@ class Console:
     """A code template for a computer console. The responsibility of this 
     class of objects is to get text or numerical input and display text output.
     
-    Stereotype:
-        Service Provider, Interfacer
     Attributes:
         prompt (string): The prompt to display on each line.
     """
@@ -19,5 +17,14 @@ class Console:
             string: The user's input as text.
         """
         return input(prompt)
+
+        
+    def display_output(self, word_list):
+        """Displays the given text on the screen. 
+        Args: 
+            self (Console): An instance of Console.
+            text (string): The text to display.
+        """
+        print(word_list)
 
  
