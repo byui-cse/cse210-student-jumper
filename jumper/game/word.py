@@ -8,24 +8,11 @@ class Word:
         Args:
             self (Word): an instance of Word.
         """
-        self.chosen_word = self.random_word()
-        self.words = ["dictionary"]        
         self.letter_guessed = ["_"]
+        self.chosen_word = self.random_word()
         self.blank_word = ["_"] * len(self.chosen_word)
-
-    def random_word(self):
-        self.chosen_word = random.choice(self.words)
-        return self.chosen_word
-
-    def letter_in_list(self, user_guess):
-        return user_guess in self.chosen_word
-
-    def verify_letter(self, user_guess):
-        if user_guess not in self.letter_guessed:
-            return self.letter_guessed.append(user_guess)
-        else:
-            return False
-
+        self.words = ["dictionary"]
+        
     def secret_word(self):
         for i in re.finditer(self.letter_guessed[-1], self.chosen_word):
             index = i.start()
@@ -33,18 +20,22 @@ class Word:
         
         blank_word = " ".join(self.blank_word)
         return blank_word
-
+    
     def see_blank(self):
         if ["_"] is not self.blank_word:
             return False
         else:
             return True
-        
-    def get_user_guess(self, prompt):
-        while True:
-            user_letter = input(prompt)
-            
-            if user_letter.isalpha() and len(user_letter) == 1:
-                return user_letter.lower()
-            
-            print("Please enter a single letter only.")
+
+    def verify_letter(self, user_guess):
+        if user_guess not in self.letter_guessed:
+            return self.letter_guessed.append(user_guess)
+        else:
+            return False
+    
+    def letter_in_list(self, user_guess):
+        return user_guess in self.chosen_word
+    
+    def random_word(self):
+        self.chosen_word = random.choice(self.words)
+        return self.chosen_word
