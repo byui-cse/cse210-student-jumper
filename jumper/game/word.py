@@ -20,22 +20,4 @@ class Word:
     def letter_in_list(self, user_guess):
         return user_guess in self.chosen_word
 
-    def verify_letter(self, user_guess):
-        if user_guess not in self.letter_guessed:
-            return self.letter_guessed.append(user_guess)
-        else:
-            return False
-
-    def secret_word(self):
-        for i in re.finditer(self.letter_guessed[-1], self.chosen_word):
-            index = i.start()
-            self.blank_word[index] = self.letter_guessed[-1]
-        
-        blank_word = " ".join(self.blank_word)
-        return blank_word
-
-    def see_blank(self):
-        if ["_"] is not self.blank_word:
-            return False
-        else:
-            return True
+    
