@@ -17,8 +17,8 @@ class Word:
         self.chosen_word = random.choice(self.words)
         return self.chosen_word
 
-    def letter_in_list(self, userInput):
-        return userInput in self.chosen_word
+    def letter_in_list(self, user_input):
+        return user_input in self.chosen_word
 
     def verify_letter(self, user_guess):
         if user_guess not in self.letter_guessed:
