@@ -26,16 +26,14 @@ class Director:
         while self.keep_playing:
             self.get_inputs()
             self.do_outputs()
-        
-        self.game_over()
+            
+    def do_outputs(self):
+        pass
 
     def get_inputs(self):
         user_input = self.console.get_letter("Guess a letter [a-z]: ")
         while not self.words.can_guess(user_input):
-            self.console.write("Letter already guessed.")
+            self.console.display("Letter already guessed.")
             user_input = self.console.get_letter("Guess a letter [a-z]: ")
         if not self.words.verify_letter(user_input):
             self.parachute.wrong_guess()
-
-    def do_outputs(self):
-        
