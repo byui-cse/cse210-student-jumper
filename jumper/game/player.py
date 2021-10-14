@@ -1,1 +1,0 @@
-# here goes the class for the player (or guesser)
