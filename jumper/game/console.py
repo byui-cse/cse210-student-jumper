@@ -1,4 +1,5 @@
 class Console:
+
     def get_letter(self, prompt):
         go_through = False
         while not go_through:
@@ -7,5 +8,5 @@ class Console:
                 return user_input.lower()
             print("Please enter a single letter.")
     
-    def write(self,message):
+    def display(self, message):
         print(message)
