@@ -3,6 +3,7 @@ from game.secretword import Secretword
 from game.parachuter import Parachuter
 from game.welcome import Welcome
 from game.bye import Bye
+from game.clear_screen import ClearScreen
 import os
 
 file_path = os.path.dirname(os.path.abspath(__file__))
@@ -14,6 +15,7 @@ class Director:
     
     Stereotype:
         Controller
+
     Attributes:
         console (Console): An instance of the class of objects known as Console.
         secret_word (Secretword): An instance of the class of objects known as Secretword.
@@ -22,6 +24,8 @@ class Director:
         bye (Bye): An instance of the class of objects known as Bye.
         keep_playing (boolean): Whether or not the game can continue.
         letter (string): A string containing the input character.
+        screen (ClearScreen): An instance of the class of objects known as ClearScreen.
+
     """
     def __init__(self):
         """The class constructor.
@@ -36,6 +40,7 @@ class Director:
         self.bye = Bye()
         self.keep_playing = True
         self.letter = ''
+        self.screen = ClearScreen()
 
 
     def start_game(self):
@@ -45,17 +50,13 @@ class Director:
             self (Director): an instance of Director.
 
         Attributes:
-            os.system("cls"): Interacts with the operating system to clear the terminal
-            console.write(): Displays text
-            word_chart, wrong_letter: Displays the worng letter guessed by the player
-            keep_playing: Loop to determine if game can continue or not
-            secret_word.guess_done(): Determines if player has won the game
-            else: If player loses, display message and what the secret word was
+            word_chart (string): contains the secret word with the revealed and unrevealed characters.
+            _ (list): all the none guessed letters.
         """
-        os.system("cls")
+        self.screen.clear_screen()
         self.console.write(self.welcome.message)
                         
-        word_chart, wrong_letter = self.secret_word.show_letters()
+        word_chart, _ = self.secret_word.show_letters()
         self.console.write("\n" + word_chart)
         
         self.console.write(self.parachuter.ascii_art[len(self.secret_word.wrong_letters)])
@@ -80,10 +81,9 @@ class Director:
         """Gets the inputs at the beginning of each round of play. In this case, ...
         Args:
             self (Director): An instance of Director.
+        
         Attributes:
-            valid_letter: determine if letter guessed is a valid english letter or not
-            self.letter: Asks for an input from the player
-            console.write: Displays a message
+            valid_letter (boolean): determines if letter guessed is a valid English letter or not.
         """
         valid_letter = False
         while not valid_letter:
@@ -105,18 +105,9 @@ class Director:
         """Updates the important game information for each round of play.
         Args:
             self (Director): An instance of Director.
+
         Attributes:
-            self.letter: Variable input from the player
-            secret_word.word: The list containing the secret word
-            console.write: Displays a message
-            index: contains each letters index from the secret word
-            letter_word: conatians each letter from the secret word
-            enumarate(): loops over the iterable object
-            secret_word.word_chart[index]: replaces the index in the list with the letter
-            secret_word.wrong_letters: Contains list of wrong letters guessed
-            parachuter.ascii_art: list of the art for the jumper in the interface
-            secret_word.guess_done(): Determines if player has guessed the secret word
-            keep_playing: Determines if game should continue or not
+            letter_word: conatians each letter from the secret word                     
         """
         
         if self.letter in self.secret_word.word:
@@ -140,9 +131,9 @@ class Director:
         Args:
             self (Director): An instance of Director.
         Attributes:
-            word_chart, wrong_letter: variable that stores the value of the worng letters guessed
-            console.write(): Displays text and variables
-            parachuter.ascii_art: Displays the correct art of the jumper according to the number of worng letters guessed
+
+            word_chart (string): contains the secret word with the revealed and unrevealed characters.
+            wrong_letter (list): all the none guessed letters.
         """
         word_chart, wrong_letter = self.secret_word.show_letters()
         self.console.write("\n" + word_chart)
