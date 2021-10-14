@@ -12,7 +12,6 @@ class Director:
         parachute: Will take care of the graphics.
         word: Will take care of getting a random word and respond to user inputs.
     """
-
     def __init__(self):
         """The class constructor.
         
