@@ -39,5 +39,5 @@ root                    (project root folder)
 Jeremy Diamond socjeremyd@gmail.com 
 Ryder Garache gryderjose@gmail.com 
 Alirio Mieres mie21001@byui.edu
-.
+Pierre Phil Bangay pierrephild@gmail.com
 
