@@ -6,7 +6,7 @@ class Word:
     def __init__(self):
         """The class constructor.
         Args:
-            self (WordHandler): an instance of WordHandler.
+            self (Word): an instance of Word.
         """
         self.words = ["dictionary"]
         self.chosen_word = self.random_word()
