@@ -40,4 +40,7 @@ ben"""
         """is guess in letter list
         output boolian
 morgan"""
-        pass
+        if guess in letter_list:
+            return True
+        else:
+            return False

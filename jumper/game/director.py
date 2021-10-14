@@ -30,5 +30,8 @@ mitchell"""
 
     def do_outputs(self):
         """display data
-morgan"""
-        pass
+        morgan"""
+        blank_word = self.jumper.update_blank_list()
+        paratute = self.jumper.update_parachute()
+        self.console.write(paratute)
+        self.console.write(blank_word)
