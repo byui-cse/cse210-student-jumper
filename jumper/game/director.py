@@ -5,7 +5,7 @@ from game.player import Player
 class Director:
     """A code template for a person who directs the game. The responsibility of 
     this class of objects is to control the sequence of play.
-    
+
     Stereotype:
         Controller
 
