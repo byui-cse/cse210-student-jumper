@@ -41,6 +41,7 @@ class Director:
     def do_outputs(self):
         print(self.word.secret_word())
         print(self.parachute.parachuter())
+        
         self.keep_playing = not self.parachute.end() or self.word.see_blank()
 
     def get_inputs(self):
