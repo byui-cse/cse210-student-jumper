@@ -8,7 +8,6 @@ class Word:
         Args:
             self (WordHandler): an instance of WordHandler.
         """
-
         self.words = ["dictionary"]
         self.chosen_word = self.random_word()
         self.letter_guessed = ["_"]
