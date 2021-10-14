@@ -5,13 +5,19 @@ from game.words import Words
 class Director:
 
     def __init__(self):
-        """The class constructor.
-        Args:
-            self (Director): an instance of Director.
+        """A code template for a person who directs the game. The responsibility of 
+    this class of objects is to keep track of the score and control the 
+    sequence of play.
+    
+    Attributes:
+        keep_playing (boolean): Whether or not the player wants to keep playing.
+        parachute: Will take care of the graphics.
+        console: Dictates user input and return a result.
+        words: Will take of getting a random word and respond to user inputs.
         """
-        self.parachute = Parachute()
-        self.console = Console()
         self.keep_playing = True
+        self.parachute = Parachute()
+        self.console = Console()        
         self.words = Words()    
         
 
