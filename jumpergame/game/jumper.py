@@ -49,7 +49,7 @@ class Jumper:
             self(Jumper): an instance of the Jumper class.
             letter: the letter guessed by the user.
         """
-        if (not self.processor.checkLetter(letter)):
+        if self.processor.checkLetter(letter) == False:
             self.wrongGuess += 1
             self.asciiArt.pop(0)
     
