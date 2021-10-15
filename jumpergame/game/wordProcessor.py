@@ -50,3 +50,12 @@ class WordProcessor:
             if l == ' _ ':
                 win = False
         return win
+
+    def get_letter(self):
+        """A method for getting a guess from the user.
+        
+        Args:
+            self(WordProcessor): an instance of the word processor class.
+        """
+        letter = input("Please guess a letter: ")
+        return letter
