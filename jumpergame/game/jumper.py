@@ -62,8 +62,7 @@ class Jumper:
         """
         keep_playing = True
 
-        if self.wrongGuess == 5:
-            self.asciiArt[0] = '  X  '
+        if self.wrongGuess == 4:
             keep_playing = False
         
         return keep_playing

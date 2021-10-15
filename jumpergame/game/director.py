@@ -48,4 +48,5 @@ class Director:
             print ('Congratulations you win the game!')
 
         elif self.jumper.continuePlay() == False:
+            self.jumper.asciiArt[0] = " X "
             print('Sorry you lose. Better luck next time!')
