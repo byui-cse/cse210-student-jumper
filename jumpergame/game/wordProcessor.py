@@ -46,7 +46,7 @@ class WordProcessor:
             self(WordProcessor): an instance of the word processor class.
         """
         win = True
-        for l in self.letters:
+        for l in self.wordSpace:
             if l == ' _ ':
                 win = False
         return win

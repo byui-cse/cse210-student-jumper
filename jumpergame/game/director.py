@@ -1,7 +1,7 @@
 from game.jumper import Jumper
 from game.wordList import WordList
 from game.wordProcessor import WordProcessor
-from jumpergame.game import wordList
+from game.wordList import WordList
 
 class Director:
     """Director class to direct all the aspects of the game."""
@@ -35,6 +35,7 @@ class Director:
         while self.wordProcessor.checkWin() == False and self.jumper.continuePlay() == True:
             guess_letter = self.wordProcessor.get_letter()
             self.wordProcessor.checkLetter(guess_letter)
+            self.jumper.checkCorrect(guess_letter)
 
             self.wordProcessor.printWord()
             self.jumper.asciiArt()
