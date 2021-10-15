@@ -1,6 +1,13 @@
 import random
 
-word =["happy", "silly", "sleepy", "hungry","branch", "status","commit"]
+class Puzzle:
 
-def words():
-    return random.choice(word)
+    def __init__():
+        pass
+
+   
+
+    def words():
+        word =["happy", "silly", "sleepy", "hungry","branch", "status","commit"]
+
+        return random.choice(word)
