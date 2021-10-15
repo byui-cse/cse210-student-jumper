@@ -11,4 +11,4 @@ class Director:
 
     def startGame(self):
         self.wordProcessor.printWord()
-        self.jumper.printJumper()
+        self.jumper.asciiArt()

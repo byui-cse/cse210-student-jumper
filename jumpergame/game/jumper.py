@@ -14,6 +14,11 @@ class Jumper:
         self.keepPlaying = True
         self.wrongGuess = 0
         self.processor = WordProcessor()
+        #self.asciiArt = []
+        
+
+    def asciiArt(self):
+        '''Prints ASCII art (parachute) to the terminal below the word that the user guesses what letters make up the word.'''
         self.asciiArt = []
         self.asciiArt.append('  ___ ')
         self.asciiArt.append(" /___\\")
@@ -23,16 +28,10 @@ class Jumper:
         self.asciiArt.append('  /|\\  ')
         self.asciiArt.append('  / \\  ')
         self.asciiArt.append('\n^^^^^^^')
-        
 
-    def printJumper(self):
-        """Method for printing the jumper in ASCII art.
-        
-        Args:
-            self(Jumper): an instance of the jumper class
-        """
         for line in self.asciiArt:
             print(line)
+
 
     def checkCorrect(self, letter):
         """Method for checking if the user's guess is correct.
