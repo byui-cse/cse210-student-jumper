@@ -1,8 +1,11 @@
 class Guesser:
     """make guess"""
-    
-    def read_response():
-        """hold question text
-        string
-ben"""
-        pass
+
+    def make_guess(self):
+        """Returns a letter between a-z.
+
+        Args:
+            self (Guesser): an instance of Guesser.
+        """
+        letter = input("Guess a letter [a-z]: ")
+        return letter
