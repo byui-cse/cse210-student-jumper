@@ -20,15 +20,26 @@ class Director:
         """get word blanks
         get parachute
         make guessGuess a letter [a-z]:
-mitchell"""
+        Author: Mitchell"""
+        parachute = self.jumper.update_parachute()
+        self.console.write(parachute)
+        word = self.console.read('Guess a letter [a-z]: ')
+        self.jumper.update_blank_list(word)
+
         pass
 
     def do_updates(self):
         """call check guess update list and parachute
-mitchell"""
+        Author: Mitchell"""
+        self.jumper.check_guess(self.jumper.word_list,self.guesser.read_response) 
+            # second argument should be changeed to self.guesser.(whatever attribute is defined in the guesser init)
+            # first argument should work when word_list is used in the jumper class.  
         pass
 
     def do_outputs(self):
         """display data
-morgan"""
-        pass
+        morgan"""
+        blank_word = self.jumper.update_blank_list()
+        paratute = self.jumper.update_parachute()
+        self.console.write(paratute)
+        self.console.write(blank_word)
