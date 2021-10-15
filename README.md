@@ -34,4 +34,4 @@ root                    (project root folder)
 
 ## Authors
 ---
-* TODO: Add your names and emails here
+* Paul Oranye | ora21001@byui.edu
