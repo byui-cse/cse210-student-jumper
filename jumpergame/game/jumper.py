@@ -31,11 +31,3 @@ class Jumper:
         if letter == '  0  ':
             self.asciiArt[0] = '  X  '
             self.keepPlaying = False
-
-
-    
-
-
-jumper = Jumper()
-
-jumper.printJumper()
