@@ -35,5 +35,6 @@ root                    (project root folder)
 ## Authors
 ---
 Jennifer Clark  Jennifer.c.schultz@gmail.com
+Kevin Espinoza  robert.kevin.espinoza@gmail.com
 
 * TODO: Add your names and emails here
