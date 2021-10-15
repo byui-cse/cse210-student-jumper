@@ -11,14 +11,8 @@ class Jumper:
         processor: an instance of the word processor class
         asciiart: a list to build the jumper art
         """
-        self.keepPlaying = True
         self.wrongGuess = 0
         self.processor = WordProcessor()
-        #self.asciiArt = []
-        
-
-    def asciiArt(self):
-        '''Prints ASCII art (parachute) to the terminal below the word that the user guesses what letters make up the word.'''
         self.asciiArt = []
         self.asciiArt.append('  ___ ')
         self.asciiArt.append(" /___\\")
@@ -28,9 +22,24 @@ class Jumper:
         self.asciiArt.append('  /|\\  ')
         self.asciiArt.append('  / \\  ')
         self.asciiArt.append('\n^^^^^^^')
+        
 
-        for line in self.asciiArt:
-            print(line)
+    def print_jumper(self):
+        '''Prints ASCII art (parachute) to the terminal below the word that the user guesses 
+        what letters make up the word.
+        '''
+        # self.asciiArt = []
+        # self.asciiArt.append('  ___ ')
+        # self.asciiArt.append(" /___\\")
+        # self.asciiArt.append(' \\   /')
+        # self.asciiArt.append('  \\ /')
+        # self.asciiArt.append('   0   ')
+        # self.asciiArt.append('  /|\\  ')
+        # self.asciiArt.append('  / \\  ')
+        # self.asciiArt.append('\n^^^^^^^')
+
+        for line in range(len(self.asciiArt)):
+            print(self.asciiArt[line])
 
 
     def checkCorrect(self, letter):
@@ -42,7 +51,7 @@ class Jumper:
         """
         if (not self.processor.checkLetter(letter)):
             self.wrongGuess += 1
-            self.asciiArt.remove(0)
+            self.asciiArt.pop(0)
     
     def continuePlay(self):
         """Method for checking if the game is gameover.
@@ -51,6 +60,10 @@ class Jumper:
             self(Jumper): Object of the Jumper class.
             letter: Guess from the user.
         """
+        keep_playing = True
+
         if self.wrongGuess == 5:
             self.asciiArt[0] = '  X  '
-            self.keepPlaying = False
+            keep_playing = False
+        
+        return keep_playing

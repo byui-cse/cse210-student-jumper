@@ -24,7 +24,7 @@ class Director:
             self(Director): An instance of the Director class.
         """
         self.wordProcessor.printWord()
-        self.jumper.asciiArt()
+        self.jumper.print_jumper()
 
     def get_updates(self):
         """A method to get the updates and run the game.
@@ -32,10 +32,13 @@ class Director:
         Args:
             self(Director): An instance of the Director class.
         """
-        while self.wordProcessor.checkWin() == False and self.jumper.continuePlay() == True:
+        win = self.wordProcessor.checkWin()
+        lose = self.jumper.continuePlay()
+
+        while win == False and lose == True:
             guess_letter = self.wordProcessor.get_letter()
-            self.wordProcessor.checkLetter(guess_letter)
             self.jumper.checkCorrect(guess_letter)
+            self.wordProcessor.checkLetter(guess_letter)
 
             self.wordProcessor.printWord()
-            self.jumper.asciiArt()
+            self.jumper.print_jumper()
