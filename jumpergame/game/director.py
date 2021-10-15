@@ -42,3 +42,10 @@ class Director:
 
             self.wordProcessor.printWord()
             self.jumper.print_jumper()
+
+    def check_gameover(self):
+        if self.wordProcessor.checkWin() == True:
+            print ('Congratulations you win the game!')
+
+        elif self.jumper.continuePlay() == False:
+            print('Sorry you lose. Better luck next time!')
