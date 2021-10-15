@@ -32,13 +32,13 @@ class Director:
         Args:
             self(Director): An instance of the Director class.
         """
-        win = self.wordProcessor.checkWin()
-        lose = self.jumper.continuePlay()
+        # win = self.wordProcessor.checkWin()
+        # lose = self.jumper.continuePlay()
 
-        while win == False and lose == True:
+        while self.wordProcessor.checkWin() == False and self.jumper.continuePlay() == True:
             guess_letter = self.wordProcessor.get_letter()
-            self.jumper.checkCorrect(guess_letter)
             self.wordProcessor.checkLetter(guess_letter)
+            self.jumper.checkCorrect(guess_letter)
 
             self.wordProcessor.printWord()
             self.jumper.print_jumper()
