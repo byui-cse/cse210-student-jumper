@@ -13,7 +13,7 @@ class Director:
         self.keep_playing = True
         self.player = Player()
         self.generator = Generator()
-        self.word = self.generator.generate()
+        self.word = self.generator.game_word
         self.guess = [None]*len(self.word)
         self.letter = ""
         pass
