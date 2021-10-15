@@ -48,11 +48,19 @@ class Director():
 
 
     def do_inputs(self):
-        pass
-
+        # let the player know how many more lives they have
+        print (f'I have {Jumper.self.lives} chances left. Please save me!')
+        # Find the letter that the player is going to guess
+        Player.self.get_input()
+        
+        
 
     def do_updates(self):
-        pass
+        # apply the guess to the current game
+        if Player.self.guess == Creator.letter_in_words:
+            Jumper.self.alter_jumper(Player.self.guess)
+        else:
+            Jumper.self.decrease_lives()
 
 
     def do_outputs(self):
@@ -70,4 +78,13 @@ class Director():
 
     def continue_game(self):
         # To enhance the program, display a congratulatory message, or tell them the word if they got it wrong.
-        pass
+        # To determain if the game contiues look at the jumper and see how many lines have been cut.
+        # To determain if the game is won, see if the whole word has been discovered
+        if Creator.self.hidden == Creator.self.word:
+            print ('Congradulations, you win!')
+            self.keep_playing = False
+        elif Jumper.self.lives == 0:
+            print (f'Too bad, better luck next time. Your word was {Creator.self.word}.')
+            self.keep_playing = False
+        else:
+           pass
