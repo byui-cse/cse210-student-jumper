@@ -2,6 +2,7 @@ from game.wordProcessor import WordProcessor
 
 
 class Jumper:
+    """A class dedicated to printing the jumper and keeping track of points."""
     def __init__(self):
         self.keepPlaying = True
         self.wrongGuess = 0
