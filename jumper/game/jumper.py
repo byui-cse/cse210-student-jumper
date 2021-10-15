@@ -5,3 +5,9 @@ from game.puzzle import Puzzle
 
 class Jumper:
     pass
+
+    def picture():
+        chute = ["\  \  \/  /  /",   "  \      /  ", "    \  /    ", "      \/      ", "       o      "]
+        for i in chute:
+            print(i)
+
