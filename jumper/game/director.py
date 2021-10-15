@@ -2,6 +2,8 @@ from game.jumper import Jumper
 from game.director import Director
 from game.player import Player
 from game.puzzle import Puzzle
+from game.console import Console
+
 
 class Director:
     """A code template for a person who directs the game. The responsibility of 
