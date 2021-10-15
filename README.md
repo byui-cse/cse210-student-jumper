@@ -39,3 +39,4 @@ root                    (project root folder)
 2.- Kyle Southwick - sou19009@byui.edu
 3.- Isaac Cruz - cru21010@byui.edu
 4.- Elie Mambou - mam13003@byui.edu
+5.- William Seaver - sea16016@byui.edu
