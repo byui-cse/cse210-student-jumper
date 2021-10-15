@@ -35,6 +35,7 @@ root                    (project root folder)
 ## Authors
 ---
 * Riley Stratton
+* Xander Eck
 
 ## Helpful Links
 ---
