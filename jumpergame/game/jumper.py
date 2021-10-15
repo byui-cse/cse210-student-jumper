@@ -44,13 +44,13 @@ class Jumper:
             self.wrongGuess += 1
             self.asciiArt.remove(0)
     
-    def continuePlay(self, letter):
+    def continuePlay(self):
         """Method for checking if the game is gameover.
         
         Args:
             self(Jumper): Object of the Jumper class.
             letter: Guess from the user.
         """
-        if letter == '  0  ':
+        if self.wrongGuess == 5:
             self.asciiArt[0] = '  X  '
             self.keepPlaying = False
