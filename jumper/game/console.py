@@ -40,4 +40,4 @@ class Console:
             self (Screen): An instance of Screen.
             text (string): The text to display.
         """
-        print(text)
+       return print(text)
