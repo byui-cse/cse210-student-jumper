@@ -1,5 +1,4 @@
-from game.jumper import Jumper
-from game.director import Director
+
 from game.player import Player
 from game.puzzle import Puzzle
 from game.console import Console
@@ -15,8 +14,7 @@ class Director:
     Attributes:
         console (Console): An instance of the class of objects known as Console.
         keep_playing (boolean): Whether or not the game can continue.
-        seeker (Seeker): An instance of the class of objects known as Seeker.
-        hider (Hider): An instance of the class of objects known as Hider.
+        
     """
     def __init__(self):
         """The class constructor.
@@ -74,6 +72,7 @@ class Director:
             
             some people I looked at used this space to validate that the letters chosen were
             english letters.  I'm not sure I want to do that. 
+            I think it should  point to player and get the user inputs, the ones I put in another space. 
         """
         pass
 
@@ -106,6 +105,8 @@ class Director:
         
         Args:
             self (Director): an instance of Director.
-        """
+        """# I think I put some of this in do updates. 
 
         pass
+
+    
