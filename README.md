@@ -34,5 +34,5 @@ root                    (project root folder)
 
 ## Authors
 ---
-* TODO: Add your names and emails here
-* Chase Odermott -- ode16003@byui.edu
+* Chase Odermott - ode16003@byui.edu
+* Carson Bush - hyperdriveguy@byui.edu
