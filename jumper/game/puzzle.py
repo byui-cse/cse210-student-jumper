@@ -37,7 +37,7 @@ class Puzzle:
         guess = input("guess a letter [a-z] : ")
 
 
-        pass
+    
 
     def guess_end(self):
         """ return True if the right word is guessed. Return False if not. 
