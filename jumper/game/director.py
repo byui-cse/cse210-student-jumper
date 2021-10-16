@@ -30,7 +30,7 @@ class Director:
         """Starts the game loop to control the sequence of play.
         
         Args:
-            self (Director): an instance of Director.
+            self (Director): An instance of Director.
         """
         self.do_outputs()
         
@@ -39,12 +39,20 @@ class Director:
             self.do_outputs()
 
     def do_outputs(self):
+        """
+
+        Args: self(Director): An instance of Director.
+        """
         print(self.word.secret_word())
         print(self.parachute.parachuter())
         
         self.keep_playing = not self.parachute.end() or self.word.see_blank()
 
     def get_inputs(self):
+        """
+
+        Args: self(Director): An instance of Director.
+        """
         user_guess = self.guesser.get_user_guess("Guess a letter [a-z]: ")
         
         while self.word.verify_letter(user_guess) == False:
