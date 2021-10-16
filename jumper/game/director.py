@@ -39,7 +39,12 @@ class Director:
         self.word = self.console.read("Guess a letter [a-z]: ")
         self.jumper.update_blank_list(self.word)
 
-        pass
+        # Make these method calls to print the blank_list; print the jumper; and make a guess
+        # self.jumper.print_blank_list()
+        # self.console.write(self.jumper.display_parachute())
+        # self.letter = self.guesser.make_guess()
+        #
+        # -ben
 
     def do_updates(self):
         """call check guess update list and parachute
@@ -67,12 +72,12 @@ class Director:
         # to check if the updated blank_list matches the word you could run something like this:
         #   blank_word = "_".join(self.jumper.blank_list)
         #   if blank_word == self.jumper.word:
-        #       self.keep_playing = false
+        #       self.keep_playing = False
         #       print("You saved me!")
         #
         # we also need to add logic for checking if the parachute man is dead
-        #   if len(self.jumper.parachute_man) < 4:
+        #   if len(self.jumper.parachute_man) < 3:
         #       print("death")
-        #       self.keep_playing = false
+        #       self.keep_playing = False
         #
         # -ben

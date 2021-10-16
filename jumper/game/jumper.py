@@ -1,6 +1,4 @@
 import random
-from game.director import Director
-from jumper.game import director
 
 
 class Jumper:
@@ -163,6 +161,15 @@ class Jumper:
             updated_parachute.pop(0)
 
         return updated_parachute
+        # I changed the logic so that if the guess is correct,
+        # it is done in the Director class
+        # so we could just rewrite it as:
+        #   def update_parachute(self):
+        #       self.parachute_man.pop(0)
+        #
+        # however we do need to add the spikes at the bottom
+        # and make it so the jumpers head turns to an "x" if he is dead
+        # -ben
 
     def update_blank_list(self, letter):
         """Updates the blank list.
