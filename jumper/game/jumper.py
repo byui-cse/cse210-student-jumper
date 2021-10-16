@@ -159,9 +159,14 @@ class Jumper:
         pass
 
     def update_blank_list(self, letter):
-        """update blank word
-        output list
-        ben"""
+        """Updates the blank list.
+        Removes the correct letter from the letter_list and inserts a placeholder.
+        Removes "_" from the blank_list and inserts the letter at the correct index.
+
+        Args:
+            self: (Jumper) An instance of jumper.
+            letter: the guessed letter that will be passed to the method in the Director class
+        """
         # get index of guessed letter
         index = self.letter_list.index(letter)
 
@@ -181,6 +186,9 @@ class Jumper:
         """is guess in letter list
         output boolean
         morgan"""
+        # hey morgan! I changed the if statement slightly so that the guess is looking in the letter list
+        # this is so that we are getting accurate results in case there are duplicates in the word itself.
+        # <3 ben
         if guess in self.letter_list:
             return True
         else:
