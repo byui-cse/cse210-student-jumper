@@ -20,10 +20,11 @@ class Jumper:
         jumpman.append(calc_alignment(self.max_para, 1) + '/ \\')
         self.jumpman = tuple(jumpman)
     
-    def print_jumper(self):
-        # TODO: change to reflect lost lives
+    def jumper_str(self):
+        jump = ''
         for line in self.jumpman:
-            print(line)
+            jump = line + '\n'
+        return jump
     
     def lose_life(self):
 
