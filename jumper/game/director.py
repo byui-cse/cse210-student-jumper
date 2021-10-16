@@ -15,8 +15,7 @@ class Director:
     Attributes:
         console (Console): An instance of the class of objects known as Console.
         keep_playing (boolean): Whether or not the game can continue.
-        seeker (Seeker): An instance of the class of objects known as Seeker.
-        hider (Hider): An instance of the class of objects known as Hider.
+        
     """
     def __init__(self):
         """The class constructor.
