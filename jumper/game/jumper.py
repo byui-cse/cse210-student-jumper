@@ -135,7 +135,7 @@ class Jumper:
         ]
         self.word = random.choice(self.word_list)
         self.letter_list = [letter for letter in self.word]
-        self.blank_list = ["_" for _ in self.letter_list]
+        self.blank_list = ["_" for _ in self.word]
 
         self.parachute_man = [
             " ___",
