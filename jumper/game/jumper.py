@@ -13,7 +13,8 @@ class Jumper:
         """make changes
         output list of strings
 daniel"""
-        pass
+        parachute_man = [" ___", "/___\\", "\   /", " \ /" ,"  O", "/ | \\", " / \\"]
+        return "\n".join(parachute_man)
 
     def choose_word(self):
         """choose word, translate to list
