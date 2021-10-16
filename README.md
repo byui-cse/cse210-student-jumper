@@ -35,3 +35,9 @@ root                    (project root folder)
 ## Authors
 ---
 * TODO: Add your names and emails here
+Morgan Allen - 
+Mitchell Ball - 
+Ben Cornia - 
+Daniel Emerson -
+Heidi Wiseman - wiseman2star@gmail.com
+
