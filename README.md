@@ -34,4 +34,6 @@ root                    (project root folder)
 
 ## Authors
 ---
-* TODO: Add your names and emails here
+Neo Adam Bontia
+Vincent Jularbal
+Esther Ezimadu
