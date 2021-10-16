@@ -2,10 +2,11 @@ import random
 import glob
 import os
 
-"Creating a class to obtain and return the secret word from the text file"
+
+#Creating a class to obtain and return the secret word from the text file
 
 class SecretWord:
-    def get_word():
+    def get_word(self):
         os.chdir(r'cse210-student-jumper')
         myFiles = glob.glob('*.txt')
         os.chdir(r'jumper')
@@ -18,3 +19,5 @@ class SecretWord:
         l = file.readlines()
         selected_word = l[index].strip('\n')
         return selected_word
+
+       
