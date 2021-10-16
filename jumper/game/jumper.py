@@ -1,4 +1,6 @@
 import random
+from game.director import Director
+from jumper.game import director
 
 class Jumper:
     """drawing, remove parts, 
@@ -25,13 +27,16 @@ class Jumper:
         """
         self.word_list = []
         self.word_letters = set(self.word_list)  # letters in the word
+        self.parachute_man = [" ___", "/___\\", "\   /", " \ /" ,"  O", "/ | \\", " / \\"]
 
-    def update_parachute(self, removeline):
+    def display_parachute(self):
         """make changes
         output list of strings
 daniel"""
-        parachute_man = [" ___", "/___\\", "\   /", " \ /" ,"  O", "/ | \\", " / \\"]
-        return "\n".join(parachute_man)
+        return "\n".join(self.parachute_man)
+
+    def update_parachute(self):
+        
 
         
 
@@ -49,6 +54,7 @@ heidi"""
 
         self.word_list = ["honest", "partnership", "hostile", "copyright", "missile", "chance", "cellar", "spokesperson", "license", "economic", "follow", "momentum", "supply", "rainbow", "capricious", "emblazon", "featherbrained", "nuance", "wearisome", "majestic", "whimsical", "twaddle", "fungus", "gemstone", "hieroglyph", "jumble", "kaleidoscope", "mosquito", "pendulum", "signature", "spectrum", "thermometer", "vacuum", "nauseating", "zonked", "functional", "jewel", "lavish", "wandering", "fascinated", "illustrious", "scribble", "invincible", "colossal", "spiteful", "aspinring", "soggy", "hypnotic", "quirky", "mellow", "pricey", "gruesome", "earsplitting", "fallacious", "protective", "authority", "overrated", "measely", "mountainous,", "exclusive", "statuesque", "vivacious", "apathetic", "oafish", "ubiquitous", "lighten", "imaginary", "knotty", "futuristic", "astonishing", "flagrant", "humdrum", "boorish", "phobia", "highfalutin", "parched", "bustling", "condition", "cuddly", "obscene", "bridge", "fuzzy", "squash", "voyager", "shipmate", "hulking", "scrawny", "woebegone", "subsequent", "poised", "efficacious", "aboriginal", "malicious", "substantial", "disillusioned", "unequaled", "existence", "jagged", "cowardly", "ferocious", "incumbent", "sulky", "sanctuary"]
         self.word = random.choice(self.word_list)
+
         # print(self.word)
 
     def blank_word(self):

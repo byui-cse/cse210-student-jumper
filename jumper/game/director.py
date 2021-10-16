@@ -33,10 +33,10 @@ class Director:
         get parachute
         make guessGuess a letter [a-z]:
         Author: Mitchell"""
-        parachute = self.jumper.update_parachute()
-        self.console.write(parachute)
-        word = self.console.read('Guess a letter [a-z]: ')
-        self.jumper.update_blank_list(word)
+        parachute = self.jumper.parachute_man
+        self.console.write(self.jumper.display_parachute())
+        self.word = self.console.read('Guess a letter [a-z]: ')
+        self.jumper.update_blank_list(self.word)
 
         pass
 
