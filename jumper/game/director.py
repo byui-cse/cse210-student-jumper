@@ -70,7 +70,7 @@ class Director:
         self.console.write(blank_word)
 
         # to check if the updated blank_list matches the word you could run something like this:
-        #   blank_word = "_".join(self.jumper.blank_list)
+        #   blank_word = "".join(self.jumper.blank_list)
         #   if blank_word == self.jumper.word:
         #       self.keep_playing = False
         #       print("You saved me!")
