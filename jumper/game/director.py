@@ -1,7 +1,7 @@
-
-from game.player import Player
-from game.puzzle import Puzzle
-from game.console import Console
+from jumper import Jumper
+from player import Player
+from puzzle import Puzzle
+from console import Console
 
 
 class Director:
@@ -109,4 +109,3 @@ class Director:
 
         pass
 
-    

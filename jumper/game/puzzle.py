@@ -22,7 +22,7 @@ class Puzzle:
         
 
         word =["happy", "silly", "sleepy", "hungry","branch", "status","commit"]
-        chosen_word = [] # i think i need each letter to be it's own string. 
+        self.chosen_word = [] # i think i need each letter to be it's own string. 
 
         self.word = word.random.choice(word) #im not sure this will work it looks wrong. it's supposed to chose a word from the list
         self.chosen_word = self.word.append()#take word chosen from word list and put it into it's own list.
