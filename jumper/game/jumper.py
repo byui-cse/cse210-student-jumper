@@ -32,10 +32,11 @@ class Jumper:
     def display_parachute(self):
         """make changes
         output list of strings
-daniel"""
+        daniel"""
         return "\n".join(self.parachute_man)
 
     def update_parachute(self):
+        pass
         
 
         
@@ -44,7 +45,7 @@ daniel"""
         """choose word, translate to list
 
         output word in list form
-heidi"""
+        heidi"""
 
         """Chooses a random word from word_list for the guesser.
 
@@ -61,7 +62,7 @@ heidi"""
         """ make copy of wordlist from choose word change to all blanks
         
         output list of underscores
-heidi"""
+        heidi"""
         
         """Creates blank spaces (underscores) for each letter of the selected word 
         for the guesser.
@@ -77,14 +78,14 @@ heidi"""
     def update_blank_list(self):
         """update blank word
         output list
-ben"""
+        ben"""
         pass
 
 
     def check_guess(self, letter_list, guess):
         """is guess in letter list
         output boolean
-morgan"""
+        morgan"""
         if guess in letter_list:
             return True
         else:
