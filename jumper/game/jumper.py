@@ -154,10 +154,6 @@ class Jumper:
         daniel"""
         return "\n".join(self.parachute_man)
 
-<<<<<<< HEAD
-    def update_parachute(self):
-        pass
-=======
     def update_parachute(self, guess, letter_list):
         updated_parachute = []
         if guess in letter_list:
@@ -167,7 +163,6 @@ class Jumper:
             updated_parachute.pop(0)
 
         return updated_parachute
->>>>>>> master
 
     def update_blank_list(self, letter):
         """Updates the blank list.
@@ -208,9 +203,6 @@ class Jumper:
         """is guess in letter list
         output boolean
         morgan"""
-        # hey morgan! I changed the if statement slightly so that the guess is looking in the letter list
-        # this is so that we are getting accurate results in case there are duplicates in the word itself.
-        # <3 ben
         if guess in self.letter_list:
             return True
         else:
