@@ -43,8 +43,9 @@ root                    (project root folder)
 - Python 3.8.0
 
 ## Authors
-
----
-
-- TODO: Add your names and emails here
-- Ben Cornia bencornia@byui.edu
+* TODO: Add your names and emails here
+Morgan Allen - morganallen@byui.edu
+Mitchell Ball - bal20049@byui.edu
+Ben Cornia - bencornia@byui.edu
+Daniel Emerson - eme20003@byui.edu
+Heidi Wiseman - wiseman2star@gmail.com
