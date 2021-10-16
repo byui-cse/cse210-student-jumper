@@ -30,14 +30,19 @@ class Jumper:
         self.parachute_man = [" ___", "/___\\", "\   /", " \ /" ,"  O", "/ | \\", " / \\"]
 
     def display_parachute(self):
-        """make changes
-        output list of strings
+        """output origional image of the parachute man
         daniel"""
         return "\n".join(self.parachute_man)
 
-    def update_parachute(self):
-        pass
-        
+    def update_parachute(self, guess, letter_list):
+        updated_parachute = []
+        if guess in letter_list:
+            updated_parachute = self.parachute_man
+        else:
+            updated_parachute = self.parachute_man
+            updated_parachute.pop(0)
+
+        return updated_parachute
 
         
 
