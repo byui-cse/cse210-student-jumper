@@ -43,10 +43,9 @@ class Director:
     def do_updates(self):
         """call check guess update list and parachute
         Author: Mitchell"""
-        self.jumper.check_guess(self.jumper.word_list,self.guesser.read_response) 
+        self.jumper.check_guess(self.jumper.word_list,self.guesser.make_guess()) 
             # second argument should be changeed to self.guesser.(whatever attribute is defined in the guesser init)
             # first argument should work when word_list is used in the jumper class.  
-        pass
 
     def do_outputs(self):
         """display data
