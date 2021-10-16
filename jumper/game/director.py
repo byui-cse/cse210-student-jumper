@@ -1,7 +1,7 @@
-from jumper import Jumper
-from player import Player
-from puzzle import Puzzle
-from console import Console
+from game.jumper import Jumper
+from game.player import Player
+from game.puzzle import Puzzle
+from game.console import Console
 
 
 class Director:
@@ -92,8 +92,8 @@ class Director:
             self.console.write(" That letter is not in the word.  Your chute line is cut")
             self.chosen_word.wrong_letters.append(self.letter)
 
-        for index, letter_word in enumerate(self.chosen_word.word):
-            if self.letter == letter.word:
+        for index, chosen_word_letters in enumerate(self.chosen_word.word):
+            if self.letter == chosen_word_letters.word:
                 self.chosen_word.chosen_word_letters[index] =self.letter
 
         if len(self.chosen_word.wrong_letters) >= len(self.jumper.ascii_art) -1 or self.chosen_word.guess_end():
