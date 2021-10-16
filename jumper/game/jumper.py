@@ -182,6 +182,17 @@ class Jumper:
         # insert correct letter at index
         self.blank_list.insert(index, correct_letter)
 
+    def print_blank_list(self):
+        """Prints the blank_list.
+
+        Args:
+        self: (Jumper) An instance of jumper.
+        """
+        # loop through each letter, strip the newline, and end each letter with a space
+        for letter in self.blank_list:
+            print(letter, end=" ")
+        print()
+
     def check_guess(self, guess):
         """is guess in letter list
         output boolean
