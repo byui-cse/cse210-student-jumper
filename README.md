@@ -36,5 +36,6 @@ root                    (project root folder)
 ---
 Jennifer Clark  Jennifer.c.schultz@gmail.com
 Kevin Espinoza Reyes  robert.kevin.espinoza@gmail.com
+Ronaldo Martins Schmidt ronaldomschmidt@gmail.com
 
 * TODO: Add your names and emails here
