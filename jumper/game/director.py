@@ -2,10 +2,11 @@ from game.jumper import Jumper
 from game.console import Console
 from game.guesser import Guesser
 
+
 class Director:
-    """A code template for a person who directs the game. The responsibility 
+    """A code template for a person who directs the game. The responsibility
     of this class of objects is to control the sequence of play.
-    
+
     Stereotype:
         Controller
 
@@ -35,7 +36,7 @@ class Director:
         Author: Mitchell"""
         parachute = self.jumper.parachute_man
         self.console.write(self.jumper.display_parachute())
-        self.word = self.console.read('Guess a letter [a-z]: ')
+        self.word = self.console.read("Guess a letter [a-z]: ")
         self.jumper.update_blank_list(self.word)
 
         pass
@@ -43,9 +44,17 @@ class Director:
     def do_updates(self):
         """call check guess update list and parachute
         Author: Mitchell"""
-        self.jumper.check_guess(self.jumper.word_list,self.guesser.make_guess()) 
-            # second argument should be changeed to self.guesser.(whatever attribute is defined in the guesser init)
-            # first argument should work when word_list is used in the jumper class.  
+        self.jumper.check_guess(self.jumper.word_list, self.guesser.make_guess())
+        # second argument should be changeed to self.guesser.(whatever attribute is defined in the guesser init)
+        # first argument should work when word_list is used in the jumper class.
+
+        # to check if the letter is in the word and to update blank list
+        #   if self.jumper.check_guess(self.letter):
+        #       self.jumper.update_blank_list(self.letter)
+        #   else:
+        #       self.jumper.update_parachute()
+        #
+        # -ben
 
     def do_outputs(self):
         """display data
@@ -54,3 +63,16 @@ class Director:
         paratute = self.jumper.update_parachute()
         self.console.write(paratute)
         self.console.write(blank_word)
+
+        # to check if the updated blank_list matches the word you could run something like this:
+        #   blank_word = "_".join(self.jumper.blank_list)
+        #   if blank_word == self.jumper.word:
+        #       self.keep_playing = false
+        #       print("You saved me!")
+        #
+        # we also need to add logic for checking if the parachute man is dead
+        #   if len(self.jumper.parachute_man) < 4:
+        #       print("death")
+        #       self.keep_playing = false
+        #
+        # -ben
