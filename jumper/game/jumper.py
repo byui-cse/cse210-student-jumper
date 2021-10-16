@@ -33,6 +33,8 @@ daniel"""
         parachute_man = [" ___", "/___\\", "\   /", " \ /" ,"  O", "/ | \\", " / \\"]
         return "\n".join(parachute_man)
 
+        
+
     def choose_word(self):
         """choose word, translate to list
 
