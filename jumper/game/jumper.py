@@ -1,7 +1,4 @@
-from game.director import Director
-from game.console import Console
-from game.player import Player
-from game.puzzle import Puzzle
+
 
 class Jumper:
     """A code template for an object representing an immage.

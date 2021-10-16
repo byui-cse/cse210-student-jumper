@@ -1,4 +1,5 @@
 import random
+from game.director import Director
 
 class Puzzle:
     """ Template for the secret word. The computer choses this word from our list of words,
