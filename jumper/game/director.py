@@ -1,5 +1,4 @@
 from game.jumper import Jumper
-from game.director import Director
 from game.player import Player
 from game.puzzle import Puzzle
 from game.console import Console
