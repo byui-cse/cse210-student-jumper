@@ -7,5 +7,5 @@ class Player:
     pass
 
 
-    def chose_letter():
-        pass
+    
+    

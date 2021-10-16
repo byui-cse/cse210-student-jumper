@@ -5,7 +5,7 @@ class Console:
     class of objects is to get text or numerical input and display text output.
     
     Stereotype:
-        Service Provider, Interfacer
+        Service Provider, Interfacer ... I would like to know what this does or means.
 
     Attributes:
         prompt (string): The prompt to display on each line.
@@ -31,4 +31,8 @@ class Console:
             self (Screen): An instance of Screen.
             text (string): The text to display.
         """
+        
+
         print(text)
+
+    
