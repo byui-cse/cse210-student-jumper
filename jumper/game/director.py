@@ -3,7 +3,19 @@ from game.console import Console
 from game.guesser import Guesser
 
 class Director:
+    """A code template for a person who directs the game. The responsibility 
+    of this class of objects is to control the sequence of play.
     
+    Stereotype:
+        Controller
+
+    Attributes:
+        console (Console): An instance of the class of objects known as Console.
+        keep_playing (boolean): Whether or not the game can continue.
+        jumper (Jumper): An instance of the class of objects known as Jumper.
+        guesser (Guesser): An instance of the class of objects known as Guesser.
+    """
+
     def __init__(self):
         self.keep_playing = True
         self.jumper = Jumper()
@@ -20,12 +32,20 @@ class Director:
         """get word blanks
         get parachute
         make guessGuess a letter [a-z]:
-mitchell"""
+        Author: Mitchell"""
+        parachute = self.jumper.update_parachute()
+        self.console.write(parachute)
+        word = self.console.read('Guess a letter [a-z]: ')
+        self.jumper.update_blank_list(word)
+
         pass
 
     def do_updates(self):
         """call check guess update list and parachute
-mitchell"""
+        Author: Mitchell"""
+        self.jumper.check_guess(self.jumper.word_list,self.guesser.read_response) 
+            # second argument should be changeed to self.guesser.(whatever attribute is defined in the guesser init)
+            # first argument should work when word_list is used in the jumper class.  
         pass
 
     def do_outputs(self):
