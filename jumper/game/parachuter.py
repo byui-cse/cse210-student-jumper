@@ -39,8 +39,8 @@ class parachuter:
         Returns:
             list that is printed in 3x5 order
         """
-        for i in self.the_image:
-            print(f'{self.the_image[self.ticks]} {self.the_image[self.ticks+1]} {self.the_image[self.ticks+2]}')
+        for i in self.the_parachuter:
+            print(f'{self.the_parachuter[self.ticks]} {self.the_parachuter[self.ticks+1]} {self.the_image[self.ticks+2]}')
             self.ticks += 3
 
     def update_parachuter(self):
@@ -69,4 +69,4 @@ class parachuter:
             self.the_parachuter[10] = '  '
             self.the_parachuter[13] = 'x'
 
-        return self.print_parachuter
+        return self.print_parachuter()
