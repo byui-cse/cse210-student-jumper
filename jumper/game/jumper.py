@@ -145,6 +145,7 @@ class Jumper:
             "  O",
             "/ | \\",
             " / \\",
+            "^^^^^^^^"
         ]
 
     def display_parachute(self):
@@ -152,13 +153,15 @@ class Jumper:
         daniel"""
         return "\n".join(self.parachute_man)
 
-    def update_parachute(self, guess, letter_list):
-        updated_parachute = []
-        if guess in letter_list:
-            updated_parachute = self.parachute_man
+    def update_parachute(self):
+        if len(self.parachute_man) > 3:
+            self.parachute_man.pop(0)
+        elif len(self.parachute_man) == 3:
+            self.parachute_man[0] = "  X"
         else:
-            updated_parachute = self.parachute_man
-            updated_parachute.pop(0)
+            return self.parachute_man
+        
+
 
     def update_blank_list(self, letter):
         """Updates the blank list.
