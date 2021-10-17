@@ -61,6 +61,7 @@ class Director:
             print("You saved me!")
 
         # we also need to add logic for checking if the parachute man is dead
-        if len(self.jumper.parachute_man) == 3:
+        if self.jumper.parachute_man[0] == "  X":
             print("death")
             self.keep_playing = False
+            print(self.jumper.display_parachute())

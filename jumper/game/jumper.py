@@ -154,9 +154,9 @@ class Jumper:
         return "\n".join(self.parachute_man)
 
     def update_parachute(self):
-        if len(self.parachute_man) > 3:
+        if len(self.parachute_man) > 4:
             self.parachute_man.pop(0)
-        elif len(self.parachute_man) == 3:
+        elif len(self.parachute_man) == 4:
             self.parachute_man[0] = "  X"
         else:
             return self.parachute_man
