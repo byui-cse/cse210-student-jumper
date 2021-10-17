@@ -9,7 +9,10 @@ class Console:
     Attributes:
         prompt (string): The prompt to display on each line.
     """
-     
+    def __init__(self) -> None:
+        pass
+
+
     def read(self, prompt):
         """Gets text input from the user through the screen.
 

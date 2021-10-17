@@ -109,3 +109,8 @@ class Director:
 
         pass
 
+if __name__ =="__main__":
+    director = Director() 
+    director.start_game()
+
+

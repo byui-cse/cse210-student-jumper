@@ -1,6 +1,7 @@
 import random
 from game.director import Director
 
+
 class Puzzle:
     """ Template for the secret word. The computer choses this word from our list of words,
     This class is responsible for getting a word for the player to guess.
@@ -24,7 +25,7 @@ class Puzzle:
         word =["happy", "silly", "sleepy", "hungry","branch", "status","commit"]
         self.chosen_word = [] # i think i need each letter to be it's own string. 
 
-        self.word = word.random.choice(word) #im not sure this will work it looks wrong. it's supposed to chose a word from the list
+        self.word = word.random.choices(word) #im not sure this will work it looks wrong. it's supposed to chose a word from the list
         self.word = self.chosen_word.append()#take word chosen from word list and put it into it's own list.
         self.chosen_word_letters = ["_"] * len(self.chosen_word) #  I want  this to make each letter into a string.
         
