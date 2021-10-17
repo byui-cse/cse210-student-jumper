@@ -12,10 +12,14 @@ class verify:
         self (verify): an instance of Director.
     """
 
-    self.secret_word = SecretWord()
+    self.selected_word = SecretWord()
 
-    def check_letter(self):
-        if guess in self.secret_word:
-            return True
-        elif guess not in self.secret_word:
-            return False
+    # this function verifies or checks if the letter is in the selected word and then returns the letter and 
+# the remaining dashes. 
+    def verify_guess(self, guess):
+           
+        x = re.finditer(f'[{guess}]+', self.selected_word)
+        match = [match.start() for match in x]
+
+        for i in match:
+            self.remaining_char[i] = f'{guess}'
