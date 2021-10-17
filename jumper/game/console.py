@@ -59,3 +59,10 @@ class Console:
                 else:
                     print("_ ", end=""
         """
+    def write(self, text):
+        """Displays the given text on the screen. 
+        Args: 
+            self (Screen): An instance of Screen.
+            text (string): The text to display.
+        """
+        print(text)

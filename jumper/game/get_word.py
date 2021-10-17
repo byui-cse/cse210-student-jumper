@@ -7,9 +7,9 @@ import os
 
 class SecretWord:
     def get_word(self):
-        os.chdir(r'cse210-student-jumper')
+        os.chdir(r'C:\Users\mayra\cse210-student-jumper\cse210-student-jumper')
         myFiles = glob.glob('*.txt')
-        os.chdir(r'jumper')
+        os.chdir(r'C:\Users\mayra\cse210-student-jumper\cse210-student-jumper\jumper')
         myFiles2 = glob.glob('*.txt')
         os.chdir(r'game')
         myFiles3 = glob.glob('*.txt')
@@ -17,7 +17,8 @@ class SecretWord:
         index = random.randint(0,844)
         file = open('words.txt', 'r')
         l = file.readlines()
-        selected_word = l[index].strip('\n')
-        return selected_word
+        def new_word(self):
+            selected_word = l[index].strip('\n')
+            return selected_word
 
        

@@ -1,4 +1,4 @@
-class parachuter:
+class Parachuter:
     """Code to represent the jumper image.
 
     Stereotype:
