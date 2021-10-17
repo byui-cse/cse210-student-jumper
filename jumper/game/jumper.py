@@ -10,7 +10,7 @@ class Jumper:
      Attributes self (Jumper): an instance of the class Console (my console class doesn't have a Jumper in it. )
 
      self.ascii_art (list) a list with the images of the parachuter at different stages. (I originally wrote this as a list of 
-     seperate pieces that make up the whole, but this picture looks better than the one I did. )
+     seperate pieces that make up the whole, but this picture looks better than the one I did before. )
 
     """
 
