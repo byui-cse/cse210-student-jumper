@@ -16,19 +16,10 @@ class Jumper:
 
     def __init__(self):
         """ the class constructor.
-         
+        
          Args: self (Jumper): an instance of Jumper
         """
         self.ascii_art = ['''
-         __
-        /__\\
-        \   /
-         \ /
-          0
-         /|\
-         /\\    
-
-    ^^^^^^^^^^^ ''', '''
          __
         /__\\
         \  /
