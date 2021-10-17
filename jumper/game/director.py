@@ -1,6 +1,7 @@
 from game.jumper import Jumper
 from game.console import Console
 from game.guesser import Guesser
+import random
 
 
 class Director:
@@ -46,9 +47,14 @@ class Director:
 
         # to check if the letter is in the word and to update blank list
         if self.jumper.check_guess(self.letter):
+            random_statements_positive = ['You´re not completely useless :D', 'lucky guess', 'Thats not fair!', 'Is that the best you can do?', 'Would you like buy a vowel?']
             self.jumper.update_blank_list(self.letter)
+            print(random.choice(random_statements_positive))
+
         else:
-            self.jumper.update_parachute()
+            self.jumper.update_parachute() 
+            random_statements_negative = ['Wow and you´re a college student', 'Your killing me Smalls!', 'This explains so much...', 'Did you really guess that letter?', 'You´re the worst', 'He´s dropping fast', 'CARE!!!']
+            print(random.choice(random_statements_negative))
 
     def do_outputs(self):
         """display data
@@ -59,6 +65,7 @@ class Director:
         if blank_word == self.jumper.word:
             self.keep_playing = False
             print("You saved me!")
+            
 
         # we also need to add logic for checking if the parachute man is dead
         if self.jumper.parachute_man[0] == "  X":
