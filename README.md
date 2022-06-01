@@ -21,7 +21,7 @@ click the "run" icon.
 The project files and folders are organized as follows:
 ```
 root                    (project root folder)
-+-- hunter              (source code for game)
++-- jumper              (source code for game)
   +-- game              (specific game classes)
   +-- __init__.py       (python package file)
   +-- __main__.py       (entry point for program)
@@ -34,4 +34,6 @@ root                    (project root folder)
 
 ## Authors
 ---
-* TODO: Add your names and emails here
+* Paul Oranye | ora21001@byui.edu
+* Grant Boreham | bor21004@byui.edu
+* Julio Rubio   | esc18010@byui.edu
